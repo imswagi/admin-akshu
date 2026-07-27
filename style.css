@@ -1,14 +1,36 @@
 /* Custom Scrollbars */
-.custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
 
 /* Modal Animations */
-.modal-overlay { opacity: 0; visibility: hidden; transition: all 0.3s ease-out; }
-.modal-overlay:not(.hidden) { opacity: 1; visibility: visible; }
-.modal-content { transform: scale(0.95) translateY(10px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.modal-overlay:not(.hidden) .modal-content { transform: scale(1) translateY(0); }
+.modal-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+}
+.modal-overlay:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    transform: scale(0.95) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-overlay:not(.hidden) .modal-content {
+    transform: scale(1) translateY(0);
+}
 
 /* Custom Select Dropdown Styling for Status */
 select.status-dropdown {
@@ -22,16 +44,42 @@ select.status-dropdown {
     padding-right: 2rem;
 }
 
-/* === UPDATED: DYNAMIC 3-STATUS COLORS === */
+/* Dynamic Status Colors via Select Option */
 .status-pending { background-color: #fefce8; color: #a16207; border-color: #fef08a; } /* Yellow */
 .status-selected { background-color: #f0fdf4; color: #15803d; border-color: #bbf7d0; } /* Green */
 .status-rejected { background-color: #fef2f2; color: #b91c1c; border-color: #fecaca; } /* Red */
 
-/* Sidebar Toggle Animation Classes */
-.sidebar-expanded { width: 16rem; }
-.sidebar-collapsed { width: 5rem; }
-.sidebar-collapsed .hide-on-collapse { display: none; }
-.sidebar-collapsed .show-on-collapse { display: block; }
-.sidebar-collapsed .nav-item { justify-content: center; padding-left: 0; padding-right: 0; }
-.sidebar-collapsed .sidebar-header-container { justify-content: center; padding-left: 0; padding-right: 0; }
-.sidebar-collapsed .toggle-btn { margin-right: 0; }
+/* =========================================
+   Sidebar Toggle Animation Classes 
+========================================== */
+.sidebar-expanded {
+    width: 17rem; /* Tailwind w-[17rem] */
+}
+
+.sidebar-collapsed {
+    width: 5rem; /* Tailwind w-20 */
+}
+
+/* Hide text elements when sidebar is collapsed */
+.sidebar-collapsed .hide-on-collapse {
+    display: none;
+}
+
+/* Center icons and buttons when the sidebar shrinks */
+.sidebar-collapsed .nav-btn,
+.sidebar-collapsed .nav-item {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Center the hamburger menu when collapsed by removing its right margin and centering the container */
+.sidebar-collapsed .sidebar-header-container {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sidebar-collapsed .toggle-btn {
+    margin-right: 0;
+}
