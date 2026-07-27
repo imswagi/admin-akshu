@@ -18,20 +18,40 @@
             <h2 class="text-2xl font-black tracking-tight text-blue-400 hide-on-collapse whitespace-nowrap">Akshu<span class="text-white">Admin</span></h2>
         </div>
         
-        <nav class="flex-1 p-4 space-y-2 overflow-hidden custom-scrollbar">
+        <nav class="flex-1 p-4 space-y-1 overflow-hidden custom-scrollbar">
             <button onclick="switchView('recruiters')" id="nav-recruiters" class="nav-btn w-full flex items-center gap-3 bg-blue-600 text-white px-4 py-3 rounded-lg shadow-md transition-all hover:bg-blue-700">
-                <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <span class="hide-on-collapse font-semibold whitespace-nowrap">Manage Recruiters</span>
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Manage Recruiters</span>
             </button>
             
+            <button onclick="switchView('performance')" id="nav-performance" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Recruiter Performance</span>
+            </button>
+
+            <button onclick="switchView('crm')" id="nav-crm" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Client CRM & Meetings</span>
+            </button>
+
             <button onclick="switchView('attendance')" id="nav-attendance" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
-                <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span class="hide-on-collapse font-semibold whitespace-nowrap">Attendance Tracker</span>
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Attendance Tracker</span>
             </button>
 
             <button onclick="switchView('salary')" id="nav-salary" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
-                <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span class="hide-on-collapse font-semibold whitespace-nowrap">Salary Management</span>
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Salary Management</span>
+            </button>
+
+            <button onclick="switchView('finance')" id="nav-finance" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Revenue & Expenses</span>
+            </button>
+
+            <button onclick="switchView('tenure')" id="nav-tenure" class="nav-btn w-full flex items-center gap-3 bg-transparent text-slate-400 px-4 py-3 rounded-lg transition-all hover:bg-slate-800 hover:text-white">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                <span class="hide-on-collapse text-sm font-semibold whitespace-nowrap">Candidate Tenure Tracker</span>
             </button>
         </nav>
         
@@ -44,10 +64,10 @@
         </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT AREA -->
     <main class="flex-1 flex flex-col h-full overflow-hidden relative transition-all duration-300">
         
-        <!-- MODULE 1: RECRUITER MANAGEMENT (Existing) -->
+        <!-- MODULE 1: RECRUITER MANAGEMENT -->
         <section id="view-recruiters" class="view-section h-full flex flex-col">
             <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center z-10 shrink-0">
                 <div>
@@ -93,7 +113,56 @@
             </div>
         </section>
 
-        <!-- MODULE 2: ATTENDANCE TRACKER -->
+        <!-- MODULE 2: RECRUITER PERFORMANCE -->
+        <section id="view-performance" class="view-section h-full flex flex-col hidden">
+            <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center shrink-0">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800">Recruiter Performance Tracker</h1>
+                    <p class="text-sm text-slate-500 mt-1">Live funnel tracking for candidate processing.</p>
+                </div>
+                <select id="perf-recruiter-select" onchange="renderPerformanceGraph()" class="border border-slate-300 rounded-lg px-4 py-2.5 font-semibold text-slate-700 outline-none bg-slate-50 w-64">
+                    <!-- Options injected by JS -->
+                </select>
+            </header>
+            <div class="flex-1 p-8 overflow-y-auto custom-scrollbar bg-slate-100/50">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 max-w-4xl mx-auto">
+                    <h3 class="text-lg font-bold text-slate-800 mb-6" id="perf-title">Performance Pipeline</h3>
+                    
+                    <!-- CSS Bar Graphs -->
+                    <div class="space-y-6" id="perf-bars-container">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 3: CLIENT CRM -->
+        <section id="view-crm" class="view-section h-full flex flex-col hidden">
+            <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center shrink-0">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800">Client CRM & Meetings</h1>
+                    <p class="text-sm text-slate-500 mt-1">Track company POC meetings and expected revenue.</p>
+                </div>
+                <button onclick="alert('Mock: Open Add Meeting Modal')" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2.5 px-5 rounded-lg shadow-lg"> + Schedule Meeting </button>
+            </header>
+            <div class="flex-1 p-8 overflow-y-auto custom-scrollbar">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <table class="w-full text-left whitespace-nowrap min-w-max">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Company & POC</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Meeting Stage</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Expected Revenue</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Next Action Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crm-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 4: ATTENDANCE TRACKER -->
         <section id="view-attendance" class="view-section h-full flex flex-col hidden">
             <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center z-10 shrink-0">
                 <div>
@@ -133,7 +202,7 @@
             </div>
         </section>
 
-        <!-- MODULE 3: SALARY MANAGEMENT -->
+        <!-- MODULE 5: SALARY MANAGEMENT -->
         <section id="view-salary" class="view-section h-full flex flex-col hidden">
             <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center z-10 shrink-0">
                 <div>
@@ -172,9 +241,162 @@
                 </div>
             </div>
         </section>
+
+        <!-- MODULE 6: FINANCIALS & REVENUE -->
+        <section id="view-finance" class="view-section h-full flex flex-col hidden">
+            <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center shrink-0">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800">Financial Ledger</h1>
+                    <p class="text-sm text-slate-500 mt-1">Track company revenue, operational expenses, and recruiter salaries.</p>
+                </div>
+                <button onclick="alert('Mock: Open Log Expense Modal')" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2.5 px-5 rounded-lg shadow-lg"> - Log Expense </button>
+            </header>
+            <div class="flex-1 p-8 overflow-y-auto custom-scrollbar">
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm border border-emerald-200 p-6 bg-emerald-50/30">
+                        <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider">Total Revenue Generated</p>
+                        <p id="fin-revenue" class="text-3xl font-black text-emerald-600 mt-1">₹ 0</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm border border-red-200 p-6 bg-red-50/30">
+                        <p class="text-sm font-semibold text-red-700 uppercase tracking-wider">Total Expenses (Inc. Salaries)</p>
+                        <p id="fin-expenses" class="text-3xl font-black text-red-600 mt-1">₹ 0</p>
+                    </div>
+                    <div class="bg-slate-900 rounded-xl shadow-lg p-6 text-white">
+                        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Net Profit / Loss</p>
+                        <p id="fin-profit" class="text-3xl font-black mt-1">₹ 0</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-bold text-slate-800 mb-4">Transaction Ledger</h3>
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <table class="w-full text-left whitespace-nowrap min-w-max">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Date</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Description / Source</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Type</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase text-right">Amount (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="finance-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 7: CANDIDATE TENURE TRACKER -->
+        <section id="view-tenure" class="view-section h-full flex flex-col hidden">
+            <header class="bg-white border-b border-slate-200 px-8 py-5 flex justify-between items-center shrink-0">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-800">Candidate Tenure Tracker</h1>
+                    <p class="text-sm text-slate-500 mt-1">Monitor 60-day retention for selected candidates (Fetched from Recruiter Data).</p>
+                </div>
+            </header>
+            <div class="flex-1 p-8 overflow-y-auto custom-scrollbar">
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <table class="w-full text-left whitespace-nowrap min-w-max">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Candidate & Company</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Recruiter</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Joining Date</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase w-1/3">60-Day Progress</th>
+                                <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tenure-table-body" class="divide-y divide-slate-100 text-sm"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- MODALS -->
+
+    <!-- Add Recruiter Modal -->
+    <div id="addRecruiterModal" class="modal-overlay hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] flex flex-col transform transition-all modal-content">
+            <div class="px-8 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50/50 rounded-t-2xl">
+                <h3 class="text-xl font-bold text-slate-800">Register New Recruiter</h3>
+                <button type="button" onclick="closeModal('addRecruiterModal')" class="text-slate-400 hover:text-red-500 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <form id="add-recruiter-form" onsubmit="submitNewRecruiter(event)" class="p-8 overflow-y-auto custom-scrollbar">
+                <!-- Auto-Generated UEID -->
+                <div class="mb-6 bg-blue-50 border border-blue-100 p-4 rounded-lg flex items-center justify-between">
+                    <div>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-wider">Generated UEID</p>
+                        <p id="auto-ueid-display" class="text-2xl font-mono font-bold text-slate-800 mt-1">AK-REC-00X</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label><input type="text" id="add-r-name" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label><input type="text" id="add-r-phone" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Official Email *</label><input type="email" id="add-r-email" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Temporary Password *</label><input type="text" id="add-r-password" required value="Akshu123!" class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Initial Account Status</label>
+                    <select id="add-r-status" class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                        <option value="approved">Approved (Active Access)</option>
+                        <option value="pending">Pending (Suspended Access)</option>
+                    </select>
+                </div>
+                
+                <div class="mt-8 flex justify-end gap-3 pt-6 border-t border-slate-100">
+                    <button type="button" onclick="closeModal('addRecruiterModal')" class="px-6 py-2.5 rounded-lg text-slate-600 font-semibold hover:bg-slate-100">Cancel</button>
+                    <button type="submit" class="px-6 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 shadow-md">Create Recruiter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Recruiter Modal -->
+    <div id="editRecruiterModal" class="modal-overlay hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 max-h-[90vh] flex flex-col transform transition-all modal-content">
+            <div class="px-8 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50/50 rounded-t-2xl">
+                <h3 class="text-xl font-bold text-slate-800">Edit Recruiter Account</h3>
+                <button type="button" onclick="closeModal('editRecruiterModal')" class="text-slate-400 hover:text-red-500 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <form id="edit-recruiter-form" onsubmit="saveRecruiterEdit(event)" class="p-8 overflow-y-auto custom-scrollbar">
+                <input type="hidden" id="edit-r-id"> 
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Full Name *</label><input type="text" id="edit-r-name" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                    <div><label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label><input type="text" id="edit-r-phone" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                    <div class="md:col-span-2"><label class="block text-sm font-semibold text-slate-700 mb-2">Official Email *</label><input type="email" id="edit-r-email" required class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none"></div>
+                </div>
+
+                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Account Status (Access Control)</label>
+                    <select id="edit-r-status" class="w-full border rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                        <option value="approved">Approved (Active Access)</option>
+                        <option value="pending">Pending (Suspended Access)</option>
+                    </select>
+                </div>
+                
+                <div class="mt-8 flex justify-between items-center pt-6 border-t border-slate-100">
+                    <button type="button" onclick="deleteRecruiter()" class="flex items-center gap-2 px-4 py-2.5 rounded-lg text-red-600 font-semibold hover:bg-red-50 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                        Delete Account
+                    </button>
+                    <div class="flex gap-3">
+                        <button type="button" onclick="closeModal('editRecruiterModal')" class="px-6 py-2.5 rounded-lg text-slate-600 font-semibold hover:bg-slate-100">Cancel</button>
+                        <button type="submit" class="px-6 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 shadow-md">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Salary Configuration Modal -->
     <div id="salaryConfigModal" class="modal-overlay hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50">
@@ -204,14 +426,6 @@
         </div>
     </div>
 
-    <!-- Add/Edit Recruiter Modals (Included from previous step for structure completeness) -->
-    <div id="addRecruiterModal" class="modal-overlay hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 modal-content p-6"><h2 class="text-xl font-bold">Add Form (Hidden for brevity, use JS to test logic)</h2><button onclick="closeModal('addRecruiterModal')" class="mt-4 p-2 bg-red-500 text-white rounded">Close</button></div>
-    </div>
-    <div id="editRecruiterModal" class="modal-overlay hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 modal-content p-6"><h2 class="text-xl font-bold">Edit Form (Hidden for brevity)</h2><button onclick="closeModal('editRecruiterModal')" class="mt-4 p-2 bg-red-500 text-white rounded">Close</button></div>
-    </div>
-
-    <script src="./script.js"></script>
+    <script src="./admin_dashboard.js"></script>
 </body>
 </html>
